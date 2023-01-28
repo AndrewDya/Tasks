@@ -488,6 +488,93 @@
 //  }
 // Console.Write("]");
 
+// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+// int [] nums = new int[12];
+// void array(int[] nums)
+// {
+//     Console.Write("[");
+//     for (int i = 0; i < nums.Length; i++)
+//  {
+//     nums [i] = new Random().Next(-9, 9);
+//     Console.Write($"{nums [i]}, ");
+//  }
+//     Console.Write("]");
+// }
+// array(nums);
+// int sum1 = 0;
+// int sum2 = 0;
+// for (int i = 0; i < nums.Length; i++)
+// {
+//     if (nums[i] < 0)
+//     {
+//         sum1 = sum1 + nums[i];
+//     }
+//     else 
+//     {
+//         sum2 = sum2 + nums[i];
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine($"Сумма отрицательных {sum1}");
+// Console.WriteLine($"Сумма положительных {sum2}");
+
+
+// Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+
+// int [] nums = new int[4];
+// void array1(int[] nums)
+// {
+//     Console.Write("[");
+//     for (int i = 0; i < nums.Length; i++)
+//  {
+//     nums [i] = new Random().Next(-20, 20);
+//     Console.Write($"{nums [i]}, ");
+//  }
+//     Console.Write("]");
+// }
+// array1(nums);
+// void array2(int[] nums)
+// {
+//     Console.Write("[");
+//     for (int i = 0; i < nums.Length; i++)
+// {
+//     nums[i] = nums[i] * (-1);
+//     Console.Write($"{nums [i]}, ");
+// }
+//     Console.Write("]");
+// }
+// Console.WriteLine();
+// array2(nums);
+
+// Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет 3; массив [6, 7, 19, 345, 3] -> да
+
+// int [] nums = new int[5];
+// Console.Write("[");
+// for (int i = 0; i < nums.Length; i++)
+// {
+//     nums[i] = new Random().Next(0, 20);
+//     Console.Write($"{nums[i]}, ");
+// }
+// Console.Write("]");
+// Console.WriteLine();
+
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+
+// string b = "Нет такого значения в массиве";
+// for (int j = 0; j < nums.Length; j++)
+// {
+//    if (nums[j] == a)
+//    {
+//       b = "Да, есть такое число в массиве";
+//    }
+// } 
+// Console.Write(b);
+
 // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
@@ -555,3 +642,29 @@
 // метод (2) который принимает, но НЕ возвращает
 // метод (3) который ничего НЕ принимает, но возвращает
 // метод (4) который принимает и возвращает
+
+//Строки
+// string s = "Hello World";
+// string s1 = "Hello";
+// string s2 = "World";
+
+// int[] nums = {1, 2, 3, 4, 5};
+// string s3 = s1 + " " + s2;
+// string s4 = string.Concat(s1, s2);
+// string s5 = string.Join(" ", nums);
+// string s = "1, 2, 3, 4, 5, 6, 7";
+// foreach (var item in s)
+// {
+//     Console.WriteLine(item);
+// }
+// Console.WriteLine(s5);
+
+// string s = "1, 2, 3, 4, 5, 6, 7.";
+// string[] nums = s.Split(new char[]{' ', '.', ','}, StringSplitOptions.RemoveEmptyEntries);
+// int[] n = nums.Select(Int32.Parse).ToArray();
+// foreach (var item in nums)
+// {
+//     Console.WriteLine(item);
+// }
+// string s1 = "10 21 35 45 57 68 79";
+// int[] num1 = Array.ConvertAll(s1.Split(), int.Parse);
