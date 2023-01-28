@@ -490,32 +490,54 @@
 //  }
 // Console.Write("]");
 
-// Теория
-// Push an existing repository from the command line
-// git remote add origin https://github.com/AndrewDya/Conspect.git
+// Теория 1 (Работа с Git)
+// git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
 // git branch -M master
 // git push -u origin master
-// || или (одно из условий должно выполняться); && и (оба условия должны выполняться)
-// int a = new Random().Next(1,3); генерация случайного числа от 1 до 3
-// for (int i = 0; i < 10; i++) цикл с условием
-// Console.WtiteLine(Math.Abs(y)) модуль
-// Console.WtiteLine(Math.Round(y, 2)) округление до 2 знаков после запятой
+// git clone https://github.com/AndrewDya/Conspect.git - склонировать внешний репозиторий на ПК
+// git pull - скачать всё из удалённого репозитория и merge
+// git init - инициализация локального репозитория
+// git status - состояние git
+// git add - добавить файлы к следующему коммиту
+// git commit -m "message" - создание коммита
+// git log - вывод на экран истории всех коммитов
+// git checkout ... - переход от одного коммита к другому, переключиться
+// git checkout master - вернуться к ветке master и продолжить
+// git diff - увидеть разницу между текущим и закомиченным файлом
+// git branch - просмотр веток
+// git brach -d ... - удаление ветки
+// git merge ... - объединение двух веток (слияние с основной)
+// - Pull request:
+// - Делаем fork репозитория
+// - Делаем clone СВОЕЙ версии репозитория
+// - Создаём новую ветку и в неё вносим свои изменения
+// - Фиксируем изменения (делаем коммиты)
+// - Отправляем свою версию в свой GitHub
+// - На сайте GitHub нажимаем кнопку Pull request
 // dotnet new console - создать новый проект
 // dotnet run - запустить проект
-// % отстаток от деления: 22 % 2 == 0
 // Console.Write("Введите число: ");
 // int a = Convert.ToInt32(Console.ReadLine()); 
-// Вводится число 
+
+// Теория 2 (Операции)
+// || Условный оператор ИЛИ (хотя бы одно из условий должно выполняться); && Условный оператор И (оба условия должны выполняться); ! логическое отрицание
+// & оператор И (Оператор & вычисляет оба операнда); | оператор ИЛИ (Оператор | вычисляет оба операнда)
+// int a = new Random().Next(1,3); генерация случайного числа от 1 до 3
+// for (int i = 0; i < 10; i++) цикл с условием; где i++ инкримент эквивалентный i = i + 1
+// Console.WtiteLine(Math.Abs(a)) модуль a
+// Console.WtiteLine(Math.Round(a, 2)) округление a до 2 знаков после запятой
+// Math.Sqrt(x); квадратный корень х
+// Math.Pow(x, 3); возведение в х степень 3
+// % отстаток от деления: Например 11 % 2 == 1
+
+// Массивы
 // string[] fact - массив строк название fact
 // int[] numbers - массив числовой название numbers
 // Console.WriteLine(f.Length) - вывести длину массива
 // for (int i = 0; i < numbers.Length; i++)
-// {
-//  Console.WriteLine(numbers.Length);
-// }
-// double num = Math.Sqrt(x); квадратный корень
-// double num = Math.Pow(x, 3); возведение в степень
-// Методы 
+// {Console.WriteLine(numbers.Length);}
+
+// Методы; функции
 // void SayLang()- метод (1) который ничего НЕ принимает, ничего НЕ возвращает
 // метод (2) который принимает, но НЕ возвращает
 // метод (3) который ничего НЕ принимает, но возвращает
