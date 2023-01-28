@@ -525,7 +525,7 @@
 // Console.Write("[");
 // for (int i = 0; i < numbers.Length; i++)
 //  {
-//     numbers [i] = new Random().Next(0, 1);
+//     numbers [i] = new Random().Next(0, 2);
 //     Console.Write($"{numbers [i]}, ");
 //  }
 // Console.Write("]");
