@@ -531,6 +531,10 @@
 // Console.Write("]");
 
 // Теория
+// Push an existing repository from the command line
+// git remote add origin https://github.com/AndrewDya/Conspect.git
+// git branch -M master
+// git push -u origin master
 // || или (одно из условий должно выполняться); && и (оба условия должны выполняться)
 // int a = new Random().Next(1,3); генерация случайного числа от 1 до 3
 // for (int i = 0; i < 10; i++) цикл с условием
