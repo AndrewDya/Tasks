@@ -590,7 +590,6 @@
 // Console.Write("]");
 // }
 // array(nums);
-
 // int b = 0; 
 // for (int i = 0; i < nums.Length; i++)
 // {
@@ -617,7 +616,6 @@
 // Console.Write("]");
 // }
 // array(nums);
-
 // int sum = 0; 
 // for (int i = 0; i < nums.Length; i = i + 2)
 // {
@@ -626,9 +624,41 @@
 // Console.WriteLine();
 // Console.Write($"Сумма элементов стоящих на нечётных позициях: {sum}");
 
-
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
+
+// int [] nums = new int[10];
+// void array(int[] nums)
+// {
+// Console.Write("[");
+// for (int i = 0; i < nums.Length; i++)
+//  {
+//     nums [i] = new Random().Next(0, 80);
+//     Console.Write($"{nums [i]}, ");
+//  }
+// Console.Write("]");
+// }
+// array(nums);
+// int min = nums [0];
+// for (int i = 0; i < nums.Length; i++)
+// { 
+//    if (nums[i] < min)
+//    { 
+//       min = nums[i];
+//    }
+// }
+// int max = nums [0];
+// for (int i = 0; i < nums.Length; i++)
+// { 
+//    if (nums[i] > max)
+//    { 
+//       max = nums[i];
+//    }
+// }
+// int dif = 0; 
+// dif = max - min;
+// Console.WriteLine();
+// Console.Write($"Разница самого большого и самого маленького элементов массива: {dif}");
 
 // Теория 1 (Работа с Git)
 // git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
