@@ -663,7 +663,7 @@
 // Теория 1 (Работа с Git)
 // git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
 // git branch -M master
-// git push -u origin master
+// git push -u origin master; git push origin <branch> - branch имя ветки которую надо отправить
 // git clone https://github.com/AndrewDya/Conspect.git - склонировать внешний репозиторий на ПК
 // git pull - скачать всё из удалённого репозитория и merge
 // git init - инициализация локального репозитория
