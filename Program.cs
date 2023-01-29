@@ -561,10 +561,8 @@
 // }
 // Console.Write("]");
 // Console.WriteLine();
-
 // Console.Write("Введите число: ");
 // int a = Convert.ToInt32(Console.ReadLine());
-
 // string b = "Нет такого значения в массиве";
 // for (int j = 0; j < nums.Length; j++)
 // {
@@ -608,12 +606,13 @@
 // void array(int[] nums)
 // {
 // Console.Write("[");
-// for (int i = 0; i < nums.Length; i++)
+// for (int i = 0; i < nums.Length-1; i++)
 //  {
-//     nums [i] = new Random().Next(0, 20);
+//     nums [i] = new Random().Next(5, 20);
 //     Console.Write($"{nums [i]}, ");
 //  }
-// Console.Write("]");
+//     nums [nums.Length-1] = new Random().Next(5, 20);
+//     Console.Write($"{nums [nums.Length-1]}]");
 // }
 // array(nums);
 // int sum = 0; 
@@ -689,6 +688,7 @@
 // dotnet run - запустить проект
 // Console.Write("Введите число: ");
 // int a = Convert.ToInt32(Console.ReadLine()); 
+// ctrl + c прекратить выполнение программы
 
 // Теория 2 (Операции)
 // || Условный оператор ИЛИ (хотя бы одно из условий должно выполняться); && Условный оператор И (оба условия должны выполняться); ! логическое отрицание
@@ -701,7 +701,7 @@
 // Math.Pow(x, 3); возведение в х степень 3
 // % отстаток от деления: Например 11 % 2 == 1
 
-// Массивы
+// Одномерные Массивы
 // string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" }; - массив строк название weekDays с элементами {} без указания длины
 // int[] array1 = new int[] { 1, 3, 5, 7, 9 }; - массив числовой название array1 с элементами {} без указания длины
 // int[] array = new int[5] - оператор new создаёт одномерный массив и указывается тип (int) и число (5) элементов
@@ -713,17 +713,35 @@
 // foreach (int i in array1)
 // {Console.Write($"{i} ");}
 
+// Двумерные Массивы
+// string[,] table = new string[2,3] - [,] - двумерный массив string 2 строки и 3 столбца
+// table[1,2] = "слово";
+// String.Empty - инициализация пустой строки
+// Пример двумерного массива
+// int[,] matrix = new int[3,4];
+
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for(int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+// Console.WriteLine();
+// }
+
 // Методы; функции
-// void SayLang()- метод (1) который ничего НЕ принимает, ничего НЕ возвращает
+// метод (1) который ничего НЕ принимает, ничего НЕ возвращает
+// void Method()
+// {Console.WriteLine("Автор")} - {содержание метода}
+// Method1() - вызов метода
 // метод (2) который принимает, но НЕ возвращает
 // метод (3) который ничего НЕ принимает, но возвращает
 // метод (4) который принимает и возвращает
 
-//Строки
+//Строки (из семинара)
 // string s = "Hello World";
 // string s1 = "Hello";
 // string s2 = "World";
-
 // int[] nums = {1, 2, 3, 4, 5};
 // string s3 = s1 + " " + s2;
 // string s4 = string.Concat(s1, s2);
@@ -734,7 +752,6 @@
 //     Console.WriteLine(item);
 // }
 // Console.WriteLine(s5);
-
 // string s = "1, 2, 3, 4, 5, 6, 7.";
 // string[] nums = s.Split(new char[]{' ', '.', ','}, StringSplitOptions.RemoveEmptyEntries);
 // int[] n = nums.Select(Int32.Parse).ToArray();
