@@ -161,10 +161,10 @@
 // {int a = 0;
 // int b = 0; 
 // int c = 0;
-// a = N / 100; //6
-// b = N % 100; //53
-// b = b / 10; //5
-// c = N % 10; //3
+// a = N / 100; 
+// b = N % 100; 
+// b = b / 10; 
+// c = N % 10; 
 // Console.Write($"{a}");
 // Console.Write($"{c}");
 // }
@@ -658,6 +658,117 @@
 // dif = max - min;
 // Console.WriteLine();
 // Console.Write($"Разница самого большого и самого маленького элементов массива: {dif}");
+
+// Задача 39: Напишите программу, которая перевернёт одномерный массив (последний элемент будет на первом месте, а первый - на последнем и т.д.)
+// [1 2 3 4 5] -> [5 4 3 2 1]; [6 7 3 6] -> [6 3 7 6]
+
+// int [] nums = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+// foreach (int aloy in nums)
+// {
+//     Console.Write($"{aloy} ");
+// }
+// int a = 0;
+// int j = nums.Length;
+// for (int i = 0; i < j - i; i++)
+// {
+//     a = nums[i];
+//     nums[i] = nums[j - 1 - i];
+//     nums[j - 1 - i] = a;
+// }
+// Console.WriteLine();
+// foreach (int aloy in nums)
+// {
+//     Console.Write($"{aloy} ");
+// }
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон
+
+// Console.Write("Введите число a, первая сторона треугольника: ");
+// int a = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите число b, вторая сторона треугольника: ");
+// int b = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите число c, третья сторона треугольника: ");
+// int c = Convert.ToInt32(Console.ReadLine()); 
+// if (a + b <= c | b + c <= a | a + c <= b)
+// {
+//     Console.WriteLine("Треугольника с такими сторонами не существует");
+// }
+// else 
+// {
+//     Console.WriteLine("Треугольник с такими сторонами существует");
+// }
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+// Console.Write("Введите количество элементов массива, M: ");
+// int M = Convert.ToInt32(Console.ReadLine()); 
+// int [] nums = new int[M];
+// for (int i = 0; i < nums.Length; i++)
+//  {
+//      Console.Write($"Введите элементы массива под индексом {i}: ");
+//      nums[i] = Convert.ToInt32(Console.ReadLine()); 
+//  }
+// int sum = 0;
+// for (int i = 0; i < nums.Length; i++)
+// { 
+//    if (nums[i] > 0)
+//    { 
+//       sum = sum + 1;
+//    }
+// }
+// Console.WriteLine();
+// Console.Write($"Чисел больше нуля ввёл пользователь: {sum}");
+
+// // Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// // 45 -> 101101; 3  -> 11; 2  -> 10
+
+// Console.Write("Введите десятичное число a: ");
+// int a = Convert.ToInt32(Console.ReadLine()); 
+// string result = String.Empty;
+// while (a > 0)
+// {
+//     result = a % 2 + result;
+//     a = a / 2;
+// }
+// Console.WriteLine(result);
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 1,5)
+
+// //Нашли решение системы уранений и заменили х и y найденными параметрами
+// Console.Write("Введите число k1: ");
+// double k1 = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите число k2: ");
+// double k2 = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите число b1: ");
+// double b1 = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите число b2: ");
+// double b2 = Convert.ToInt32(Console.ReadLine()); 
+// double x = 0;
+// double y = 0;
+// x = (b2 - b1) / (k1 - k2);
+// y = (k1 * x) + b2;
+// Console.Write($"Координаты пересечения прямых: ({x};{y})");
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// // Если N = 5 -> 0 1 1 2 3; Если N = 3 -> 0 1 1; Если N = 7 -> 0 1 1 2 3 5 8
+
+// Console.Write("Введите число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+// int Fib1 = 0;
+// int Fib2 = 1;
+// int Fib3 = 1;
+// for (int i = 2; i <= N; i++)
+// {
+//      Fib1 = Fib2;
+//      Fib2 = Fib3;
+//      Fib3 = Fib1 + Fib2;
+//      Console.WriteLine($"{Fib3}");
+// }
+//хз как решать
 
 // Теория 1 (Работа с Git)
 // git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
