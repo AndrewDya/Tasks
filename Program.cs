@@ -945,6 +945,39 @@
 // Console.WriteLine($" Среднее арифметическое {j} столбца = {Math.Round(sum2, 2)}");
 // }
 
+// Бонусная задача
+// x1 ^ 5 + x2 ^ 5 + x3 ^ 5 + x4 ^ 5 = x5 ^ 5
+// Сумма 4 чисел в 5 степени равна пятому числу в пятой степени
+// Нужно найти эти числа
+
+// for (int i = 1; i < 25; i++)
+//     {  
+//         for (int j = 22; j < 50; j++)
+//             {  
+//                 for (int k = 1; k < 25; k++)
+//                     {  
+//                         for (int l = 1; l < 25; l++)
+//                             {  
+//                                 for (int m = 1; m < 25; m++)
+//                                     {
+//                                         if (Math.Pow(i, 5) == Math.Pow(j, 5) + Math.Pow(k, 5) + Math.Pow(l, 5) + Math.Pow(m, 5))
+//                                         {
+//                                         Console.WriteLine($"Очень сильно соответствуют x1 ={j}, x2 ={k}, x3 ={l}, x4 ={m}, x5 ={i}, Праздник");
+//                                         break;
+//                                         }
+//                                         else if (Math.Pow(i, 5) != Math.Pow(j, 5) + Math.Pow(k, 5) + Math.Pow(l, 5) + Math.Pow(m, 5))
+//                                         {
+//                                         Console.WriteLine("-");
+//                                         }
+//                                     }
+//                             }
+//                     }
+
+//             }
+//         } 
+// Console.Write($"Не нашли:(");
+// хз как решать
+
 // Теория 1 (Работа с Git)
 // git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
 // git branch -M master
