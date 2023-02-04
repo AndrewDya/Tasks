@@ -770,6 +770,181 @@
 // }
 //хз как решать
 
+// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
+
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     matrix [i,0] = new Random().Next(-50, 50);
+//     for(int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix [i,j] = new Random().Next(-50, 50);
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+// Console.WriteLine();
+// }
+
+// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     matrix [i,0] = i;
+//     for(int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix [i,j] = i + j;
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+// Console.WriteLine();
+// }
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+// double[,] matrix = new double[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {
+//     for(int j = 0; j < matrix.GetLength(1); j++)
+//     {
+//         matrix [i,j] = new Random().Next(-10, 10);
+//         matrix [i,j] = matrix [i,j] / new Random().Next(1, 10);
+//         Console.Write($"{Math.Round(matrix[i, j], 2)} ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine();
+
+// Задача 49: Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+// Например, изначально массив выглядел вот так:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//         matrix [i,j] = new Random().Next(0, 10);
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//             if (i % 2 == 0 && j % 2 == 0)
+//             {
+//             matrix [i,j] =  matrix [i,j] * matrix [i,j];
+//             }
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17 -> такого числа в массиве нет
+
+// Console.Write("Введите строку m: ");
+// int m = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите столбец n: ");
+// int n = Convert.ToInt32(Console.ReadLine()); 
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//         matrix [i,j] = new Random().Next(0, 10);
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+// if (m <= matrix.GetLength(0) && n <= matrix.GetLength(1))
+// {
+//     Console.Write($"Под индексом ({m},{n}), находится элемент: {matrix[m, n]} ");
+// }
+// else
+// {
+//     Console.Write("Такого элемента нет в массиве");
+// }
+
+// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//         matrix [i,j] = new Random().Next(0, 10);
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+// int sum = 0;
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//             if (i == j)
+//             {
+//             sum = matrix [i,j] + sum;
+//             Console.Write($"{matrix[i, j]} +");
+//             }
+//     }
+// }
+// Console.Write($" Cумма элементов главной диагонали {matrix[0,0]} + {matrix[1,1]} + {matrix[2,2]}: {sum}");
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// int[,] matrix = new int[3,4];
+// for (int i = 0; i < matrix.GetLength(0); i++)
+// {   
+//     for (int j = 0; j < matrix.GetLength(1); j++)
+//     {   
+//         matrix [i,j] = new Random().Next(0, 10);
+//         Console.Write($"{matrix[i, j]} ");
+//     }
+//     Console.WriteLine();
+// }
+// Console.WriteLine();
+// double sum1 = 0;
+// for (int j = 0; j < matrix.GetLength(1); j++)
+// {   
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {   
+//         sum1 = sum1 + matrix[i, j];
+//     }
+//     double sum2 = sum1 / 3;
+//     sum1 = 0;
+// Console.WriteLine($" Среднее арифметическое {j} столбца = {Math.Round(sum2, 2)}");
+// }
+
 // Теория 1 (Работа с Git)
 // git remote add origin https://github.com/AndrewDya/Conspect.git - Команды для выгрузки на удалённый репозиторий с ПК
 // git branch -M master
