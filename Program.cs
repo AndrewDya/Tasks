@@ -819,18 +819,31 @@
 // for (int i = 0; i < array.Length; i++) - цикл с перебором числа элементов
 // Console.WriteLine(array.Length); - вывод длины массива array
 // Console.WriteLine(weekDays[6]); - вывод шестого элемента массива weekDays
-// Пример вывода элементов массива через цикл foreach
+// Пример вывода элементов массива через цикл foreach (обрабатывает элементы в порядке возрастания индекса, начиная с индекса 0 и заканчивая индексом Length - 1:), 
+// где i - может быть любым другим названием
 // int[] array1 = new int[] { 1, 3, 5, 7, 9 };
 // foreach (int i in array1)
 // {Console.Write($"{i} ");}
 
+// Оператор break завершает выполнение ближайшего оператора
+// int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// foreach (int number in numbers)
+// {
+//     if (number == 3)
+//     {break;}
+//     Console.Write($"{number} ");
+// }
+// Console.WriteLine();
+// Console.WriteLine("End of the example.");
+
 // Двумерные Массивы
-// string[,] table = new string[2,3] - [,] - двумерный массив string 2 строки и 3 столбца
+// string[,] table = new string[2,3] - [,] - двумерный массив типа string подназванием table 2 строки и 3 столбца
 // table[1,2] = "слово";
+// int[,] array2 = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+// array2[2, 1] = 25; - присвоить значение 25 элементу массива array2 в строке 2 и столбце 1
 // String.Empty - инициализация пустой строки
 // Пример двумерного массива
 // int[,] matrix = new int[3,4];
-
 // for (int i = 0; i < matrix.GetLength(0); i++)
 // {
 //     for(int j = 0; j < matrix.GetLength(1); j++)
