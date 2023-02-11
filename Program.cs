@@ -1515,3 +1515,74 @@
 //     return A * Nat(A, B - 1);
 // }
 // Console.WriteLine(Nat(A,B));
+
+// Домашнее задание
+// Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+// Console.Write("Введите натуральное число: ");
+// int a = Convert.ToInt32(Console.ReadLine()); 
+// int list(int a)
+// {
+//     if(a == 1) 
+//     {
+//        Console.Write($"{a} ");
+//        return a;
+//     }
+//     else 
+//        Console.Write($"{a} ");
+//        return a + list(a - 1);
+// }
+// list(a);
+
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8 -> 30
+
+// Console.Write("Введите натуральное число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите натуральное число M: ");
+// int M = Convert.ToInt32(Console.ReadLine()); 
+// int Nat(int M, int N)
+// {
+//     if (M == N)
+//     {
+//         return M;
+//     } 
+//     else 
+//     return M + Nat(M - 1, N);
+// }
+// Console.Write($"{Nat(M,N)}");
+
+// Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+// Console.Write("Введите два неотрицательных числа m: ");
+// int m = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("и n: ");
+// int n = Convert.ToInt32(Console.ReadLine()); 
+// if (m < 0 || n < 0)
+// {
+// Console.Write("Прочитайте условие");
+// }
+// else
+// {int ackerman(int m, int n)
+// {
+//     if (m == 0)
+//     {
+//         return n + 1;
+//     }
+//     else 
+//     {
+//         if (n == 0)
+//         {
+//         return ackerman(m - 1, 1);
+//         }
+//         else return ackerman(m - 1, ackerman(m, n - 1));
+//     }
+// }
+// Console.Write($"Функция Аккермана A({m},{n}) = {ackerman(m,n)}");
+// }
+// Подсказка https://drive.google.com/file/d/1aTrtfIKZXiBByMeeWsi9Jit7uWEwZ3SJ/view?usp=share_link
