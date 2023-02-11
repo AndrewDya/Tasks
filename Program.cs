@@ -1405,3 +1405,113 @@
 // }
 // string s1 = "10 21 35 45 57 68 79";
 // int[] num1 = Array.ConvertAll(s1.Split(), int.Parse);
+
+// Лекция. Рекурсия - функция, вызывающая саму себя
+// При описании рекурсии важно задавать условие выхода
+// Факториал
+// double Factorial(int n)
+// {
+//     if (n == 1) return 1;
+//     else return n * Factorial(n-1);
+// }
+// for (int i = 1; i < 40; i++)
+// {
+// Console.WriteLine($"{i}! = {Factorial(i)}");
+// }
+
+// Числа Фибоначи
+// double Fibonacci(int n)
+// {
+//     if(n == 1 || n == 2) return 1;
+//     else return Fibonacci(n - 1) + Fibonacci(n - 2);
+// }
+// for (int i = 1; i < 20; i++)
+// {
+//     Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+// }
+
+// Сумма чисел от 1 до n
+// int SumRec(int n)
+// {
+//     if (n == 0) return 0;
+//     else return n + SumRec (n - 1);
+// }
+// Console.WriteLine(SumRec(3));
+
+// Семинар
+// Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+// Console.Write("Введите натуральное число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+// void Nat(int N)
+// {
+//     if (N == 1)
+//     {
+//         Console.Write($"{N} ");
+//     } 
+//     else 
+//     {
+//         Nat(N - 1); 
+//         Console.Write($"{(N)} ");
+//     }
+// }
+// Nat(N);
+
+// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 6, 7, 8"
+
+// Console.Write("Введите натуральное число M: ");
+// int M = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите натуральное число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+// void Nat(int M, int N)
+// {
+//     if (M == N)
+//     {
+//         Console.Write($"{N} ");
+//     } 
+//     else 
+//     {
+//         Nat(M - 1, N); 
+//         Console.Write($"{(M)} ");
+//     }
+// }
+// Nat(M,N);
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+// Console.Write("Введите натуральное число N: ");
+// int N = Convert.ToInt32(Console.ReadLine()); 
+// int Nat(int N)
+// {
+//     if (N < 10)
+//     {
+//         return N;
+//     } 
+//     else return N % 10 + Nat(N / 10);
+// }
+// Console.Write($"{(Nat(N))}");;
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+// Console.Write("Введите натуральное число A: ");
+// int A = Convert.ToInt32(Console.ReadLine()); 
+// Console.Write("Введите натуральное число B: ");
+// int B = Convert.ToInt32(Console.ReadLine()); 
+// int Nat(int A, int B)
+// {
+//     if (B == 1)
+//     {
+//         return A;
+//     }
+//     else
+//     return A * Nat(A, B - 1);
+// }
+// Console.WriteLine(Nat(A,B));
